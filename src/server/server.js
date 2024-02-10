@@ -4,11 +4,19 @@ import { App } from "../App";
 import { indexTemplate } from "./indexTemplate";
 import axios from 'axios';
 import compression from 'compression';
+import helmet from 'helmet';
 const app = express();
 const PORT = process.env.PORT || '3000';
+const IS_DEV = process.env.NODE_ENV;
 
 app.use("/static", express.static("./dist/client"));
-app.use(compression());
+
+if (!IS_DEV) {
+  app.use(compression());
+  app.use(helmet({
+    contentSecurityPolicy: false,
+  }));
+}
 
 app.get("/auth", (req, res) => {
   axios.post(
