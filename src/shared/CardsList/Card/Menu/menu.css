@@ -1,0 +1,120 @@
+.buttonDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  offset: 5px;
+  transition: background-color .3s ease-in-out;
+  z-index: 100;
+}
+
+.buttonDropdown svg {
+  width: 20px;
+  height: 5px;
+  transform: rotate(0deg);
+}
+
+.buttonDropdown:active {
+  background-color: rgba(51, 51, 51, 0.10);
+}
+
+.wrapDropdown {
+  position: absolute;
+  padding-top: 14px;
+  border-radius: 3px;
+  background-color: var(--white);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.listDropdown {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdownListItem {
+  display: flex;
+  margin: 0;
+  padding: 11px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 12px;
+  color: var(--gray99);
+  list-style: none;
+  border-bottom: 1px solid var(--grayEC);
+}
+
+.dropdownListItem svg {
+  margin-right: 6px;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 1;
+}
+
+.dropdownItemClose {
+  justify-content: center;
+  color: var(--gray66);
+  border-bottom: none;
+  background-color: var(--grayD9);
+}
+
+.btnClose {
+  padding: 12px 23px;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  background-color: var(--grayD9);
+  font-size: 12px;
+}
+
+@media(any-hover: hover) {
+  .buttonDropdown:hover {
+    background-color: rgba(51, 51, 51, 0.10);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .buttonDropdown svg {
+    transform: rotate(90deg);
+  }
+
+  .wrapDropdown {
+    padding-bottom: 10px;
+  }
+
+  .dropdownItemClose {
+    display: none;
+  }
+
+  .dropdownListItem {
+    padding: 5px 0 7px;
+    font-size: 14px;
+  }
+
+  .dropdownListItem:last-child {
+    border-bottom: none;
+  }
+
+  .dropdownListItem svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dropdownListItem:hover {
+    color: var(--orange);
+  }
+
+  .dropdownListItem:hover svg path {
+    fill: var(--orange);
+  }
+
+  .btnClose {
+    display: none;
+  }
+}

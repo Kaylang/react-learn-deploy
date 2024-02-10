@@ -1,0 +1,76 @@
+.counter {
+  padding: 0 20px;
+  padding-right: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
+.counter__decrement,
+.counter__increment {
+  position: relative;
+  width: 19px;
+  height: 10px;
+  align-items: center;
+}
+
+.counter__decrement::after,
+.counter__increment::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  bottom: -7px;
+  left: -5px;
+}
+
+.counter__decrement svg {
+  transform: rotateZ(180deg);
+}
+
+.counter__decrement svg path,
+.counter__increment svg path {
+  transition: fill .3s ease-in-out;
+}
+
+.counter > span {
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+@media(any-hover: hover) {
+  .counter__increment:hover path {
+    fill: var(--green);
+  }
+
+  .counter__decrement:hover path {
+    fill: var(--red);
+  }
+}
+
+.counter__increment:active path {
+  fill: var(--green);
+}
+
+.counter__decrement:active path {
+  fill: var(--red);
+}
+
+@media all and (min-width: 1024px) {
+  .counter {
+    padding: 0 10px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .counter > span {
+    padding: 7px 0;
+    font-weight: 400;
+    color: var(--black);
+  }
+}

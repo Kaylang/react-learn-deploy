@@ -1,0 +1,93 @@
+.list {
+  padding-top: 30px;
+  overflow-y: auto;
+}
+
+.item {
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.header {
+  position: relative;
+  padding-left: 25px;
+  align-items: flex-start;
+}
+
+.btnClose {
+  margin-right: 20px;
+}
+
+.authorBlock {
+  margin-bottom: 10px;
+}
+
+.author {
+  margin-right: 10px;
+}
+
+.main {
+  padding-left: 30px;
+  border-left: 3px solid var(--grayD9);
+}
+
+.commentBody {
+  margin-bottom: 10px;
+}
+
+.footer {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer__controls {
+  align-items: center;
+}
+
+.responseBtn {
+  margin-right: 20px;
+}
+
+.responseBtn > div {
+  margin-right: 5px;
+}
+
+.responseBtn:hover > span {
+  color: var(--orange);
+}
+
+.responseBtn:hover svg path {
+  fill: var(--orange);
+}
+
+.controlList {
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.controlList > li {
+  padding: 5px 0;
+  width: auto;
+  border-bottom: none;
+}
+
+.controlList > li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.controlList > li:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  row-gap: 10px;
+  transform: translate(-45%, -40%);
+}
+
+.counter > span {
+  display: none;
+}
