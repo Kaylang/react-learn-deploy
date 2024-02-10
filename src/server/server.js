@@ -3,10 +3,12 @@ import ReactDOM from "react-dom/server";
 import { App } from "../App";
 import { indexTemplate } from "./indexTemplate";
 import axios from 'axios';
+import compression from 'compression';
 const app = express();
 const PORT = process.env.PORT || '3000';
 
 app.use("/static", express.static("./dist/client"));
+app.use(compression());
 
 app.get("/auth", (req, res) => {
   axios.post(
