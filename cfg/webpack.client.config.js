@@ -7,11 +7,6 @@ const IS_DEV = NODE_ENV === "development";
 const IS_PROD = NODE_ENV === "production";
 const GLOBAL_CSS_REGEXP = /\.global\.css$/;
 const DEV_PLUGINS = [new CleanWebpackPlugin(), new HotModuleReplacementPlugin()];
-// const envKeys = Object.keys(process.env).reduce((prev, next) => {
-//   prev[`process.env.${next}`] = JSON.stringify(process.env[next]);
-//   return prev;
-// }, {});
-// const COMMON_PLUGINS = [new DefinePlugin(envKeys)];
 const COMMON_PLUGINS = [new DefinePlugin({ 'process.env.CLIENT_ID': `'${process.env.CLIENT_ID}'` })];
 
 function setupDevtool() {
