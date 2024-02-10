@@ -1,0 +1,38 @@
+.cardTitle {
+  margin: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  order: 1;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--gray33);
+}
+
+.titleAncor {
+  font: inherit;
+  text-align: start;
+}
+
+.titleAncor::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+@media (any-hover: hover) {
+  .titleAncor:hover {
+    color: var(--orange);
+  }
+}
+
+.titleAncor:active {
+  color: var(--orange);
+}
+
+@media all and (min-width: 1024px) {
+  .cardTitle {
+    order: 0;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}

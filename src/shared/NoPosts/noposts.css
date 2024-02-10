@@ -1,0 +1,7 @@
+.noPostsWrapper {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: '#333';
+}

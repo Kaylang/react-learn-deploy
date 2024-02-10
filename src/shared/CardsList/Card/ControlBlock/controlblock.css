@@ -1,0 +1,70 @@
+.controlBlock {
+  padding: 0 20px;
+  padding-left: 0;
+  width: 65%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
+.comments {
+  width: 37px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.comments__btn {
+  width: 14px;
+  height: 14px;
+}
+
+.controls {
+  flex-wrap: nowrap;
+  column-gap: 15px;
+}
+
+.controls__btn {
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.controls__btn svg {
+  flex-grow: 1;
+}
+
+.controls__btn > span {
+  display: none;
+}
+
+.controls__stat,
+.controls__share,
+.controls__del {
+  display: initial;
+}
+
+.controls__save {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .controlBlock {
+    display: none !important;
+  }
+
+  .counter__decrement svg {
+    transform: rotateZ(180deg);
+  }
+
+  .counter__increment svg {
+    transform: rotateZ(0deg);
+  }
+
+  .comments,
+  .controls {
+    display: none;
+  }
+}

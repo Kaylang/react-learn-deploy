@@ -1,0 +1,116 @@
+.userBlock {
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+}
+
+.userBlock__wrap {
+  position: relative;
+  margin-bottom: 7px;
+  width: max-content;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 10px;
+  line-height: normal;
+  z-index: 1;
+}
+
+.userBlock:hover {
+  color: var(--orange);
+}
+
+.userBox {
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatarImage {
+  margin-right: 7px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.username {
+  position: relative;
+  margin-right: 7px;
+  color: var(--orange);
+  z-index: 1;
+  text-underline-offset: 2px;
+  transition: text-decoration .3s ease-in-out;
+  z-index: 1;
+}
+
+.username::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -7px;
+  bottom: -7px;
+  left: -7px;
+}
+
+@media(any-hover: hover) {
+  .username:hover {
+    text-decoration: underline;
+  }
+}
+
+.username:active {
+  text-decoration: underline;
+}
+
+.published {
+  color: var(--black);
+}
+
+.looked {
+  display: none;
+}
+
+.removeItem {
+  display: none;
+}
+
+.published__span {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .userBlock__wrap {
+    font-size: 14px;
+  }
+
+  .username {
+    display: flex;
+    order: 2;
+  }
+
+  .userBlock {
+    padding: 15px 0;
+  }
+
+  .looked {
+    display: block;
+  }
+
+  .looked svg {
+    margin-right: 4px;
+  }
+
+  .published {
+    order: 0;
+    margin-right: 7px;
+  }
+
+  .avatarImage {
+    order: 1;
+  }
+
+  .published__span {
+    display: inline-block;
+  }
+}
