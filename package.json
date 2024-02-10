@@ -10,9 +10,9 @@
   "scripts": {
     "build:dev": "env NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "env NODE_ENV=production webpack --config webpack.config.js",
-    "dev": "env NODE_ENV=development CLIENT_ID=ogS0hIBKPW2vVzr7Bbv34g SECRET=CNpdGS_HZpD47H5gWr8TSGRVRkmewQ REDIRECT_URI='http://localhost:3000' node ./bin/dev.js",
+    "dev": "env NODE_ENV=development CLIENT_ID=ogS0hIBKPW2vVzr7Bbv34g SECRET=CNpdGS_HZpD47H5gWr8TSGRVRkmewQ REDIRECT_URI=http://localhost:3000 node ./bin/dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "env CLIENT_ID=smnsovZ3QlEVpteAyLbldA SECRET=4zXL__n6eWtgW8O-F2RpsXegy9_LqA REDIRECT_URI='https://react-learn-deploy.vercel.app' node ./dist/server/server"
+    "build": "env CLIENT_ID=smnsovZ3QlEVpteAyLbldA SECRET=4zXL__n6eWtgW8O-F2RpsXegy9_LqA REDIRECT_URI=https://react-learn-deploy.vercel.app node ./dist/server/server"
   },
   "author": "",
   "license": "ISC",
