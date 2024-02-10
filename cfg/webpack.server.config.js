@@ -49,7 +49,7 @@ module.exports = {
         options: {
           name: "[name].[ext]",
           // outputPath: path.resolve(__dirname, "../dist/server"),
-          publicPath: "//localhost:3001/static",
+          // publicPath: "//localhost:3001/static",
         }
       },
     ],

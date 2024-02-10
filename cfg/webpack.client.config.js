@@ -33,7 +33,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../dist/client"),
     filename: "client.js",
-    publicPath: "//localhost:3001/static",
+    // publicPath: "//localhost:3001/static",
   },
   module: {
     rules: [
@@ -67,7 +67,7 @@ module.exports = {
         options: {
           name: "[name].[ext]",
           // outputPath: path.resolve(__dirname, "../dist/client"),
-          publicPath: "//localhost:3001/static",
+          // publicPath: "//localhost:3001/static",
         }
       },
     ],
