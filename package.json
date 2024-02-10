@@ -1,12 +1,9 @@
 {
-  "homepage": "http://Kaylang.github.io/react-deploy",
+  "homepage": "https://react-learn-deploy-git-master-kaylangs-projects.vercel.app",
   "name": "reactapp",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "build:dev": "env NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "env NODE_ENV=production webpack --config webpack.config.js",

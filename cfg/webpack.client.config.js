@@ -38,6 +38,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../dist/client"),
     filename: "client.js",
+    publicPath: "../static",
   },
   module: {
     rules: [
@@ -70,6 +71,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
+          publicPath: "../static",
         }
       },
     ],
