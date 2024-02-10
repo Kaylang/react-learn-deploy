@@ -9,6 +9,8 @@ const app = express();
 const PORT = process.env.PORT || '3000';
 const IS_DEV = process.env.NODE_ENV;
 
+console.log(process.env.REDIRECT_URI);
+
 app.use("/static", express.static("./dist/client"));
 
 if (!IS_DEV) {
