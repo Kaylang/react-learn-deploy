@@ -4,7 +4,6 @@ import { App } from "../App";
 import { indexTemplate } from "./indexTemplate";
 import axios from 'axios';
 const app = express();
-const USER_PASSWORD = 'CNpdGS_HZpD47H5gWr8TSGRVRkmewQ';
 const PORT = process.env.PORT || '3000';
 
 app.use("/static", express.static("./dist/client"));
@@ -14,7 +13,7 @@ app.get("/auth", (req, res) => {
     'https://www.reddit.com/api/v1/access_token',
     `grant_type=authorization_code&code=${req.query.code}&redirect_uri=https://react-learn-deploy.vercel.app/auth`,
     {
-      auth: { username: process.env.CLIENT_ID, password: USER_PASSWORD, },
+      auth: { username: process.env.CLIENT_ID, password: process.env.SECRET, },
       headers: { 'Content-type': 'application/x-www-form-urlencoded' }
     }
   )
