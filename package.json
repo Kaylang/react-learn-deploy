@@ -1,16 +1,20 @@
 {
-  "homepage": "http://PikchaGameDev.github.io/react-deploy",
+  "homepage": "http://Kaylang.github.io/react-deploy",
   "name": "reactapp",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "predeploy": "npm run build:dev",
     "deploy": "gh-pages -d build:dev",
-    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "dev": "cross-env NODE_ENV=development CLIENT_ID=ogS0hIBKPW2vVzr7Bbv34g node ./bin/dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "env NODE_ENV=development webpack --config webpack.config.js",
+    "build": "env NODE_ENV=production webpack --config webpack.config.js",
+    "dev": "env NODE_ENV=development CLIENT_ID=ogS0hIBKPW2vVzr7Bbv34g node ./bin/dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/server/server"
   },
   "author": "",
   "license": "ISC",
