@@ -48,8 +48,6 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          // outputPath: path.resolve(__dirname, "../dist/server"),
-          // publicPath: "//localhost:3001/static",
         }
       },
     ],
@@ -57,9 +55,8 @@ module.exports = {
   optimization: {
     minimize: false,
   },
-  plugins: [new DefinePlugin({ 'process.env.CLIENT_ID': `'${process.env.CLIENT_ID}'` })],
-  // plugins: [new DefinePlugin(Object.keys(process.env).reduce((prev, next) => {
-  //   prev[`process.env.${next}`] = JSON.stringify(process.env[next]);
-  //   return prev;
-  // }, {}))],
+  plugins: [new DefinePlugin({
+    'process.env.CLIENT_ID': `'${process.env.CLIENT_ID}'`,
+    'process.env.REDIRECT_URI': `'${process.env.REDIRECT_URI}'`
+  })],
 };
