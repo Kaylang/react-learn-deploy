@@ -36,7 +36,7 @@ module.exports = {
   mode: NODE_ENV ? NODE_ENV : "development",
   entry: getEntry(),
   output: {
-    path: path.resolve(__dirname, "../dist/client"),
+    path: path.resolve(__dirname, "../public/client"),
     filename: "client.js",
   },
   module: {
