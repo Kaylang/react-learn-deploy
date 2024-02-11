@@ -5,6 +5,7 @@ import { indexTemplate } from "./indexTemplate";
 import axios from 'axios';
 import compression from 'compression';
 import helmet from 'helmet';
+
 const app = express();
 const PORT = process.env.PORT || '3000';
 const IS_DEV = process.env.NODE_ENV;
@@ -33,7 +34,7 @@ app.get("/auth", (req, res) => {
     .catch(console.error);
 });
 
-app.get('*', (req, res) => {
+app.get('*', (_, res) => {
   res.send(indexTemplate(ReactDOM.renderToString(App())));
 });
 
